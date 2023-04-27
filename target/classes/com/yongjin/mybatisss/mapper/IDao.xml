@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="com.yongjin.mybatisss.dao.IDao">
+	<insert id="writeDao">   <!-- 추상메서드를 호출 -->
+		INSERT INTO myboard(mid, mwriter, mcontent) VALUES (myboard_seq.nextval, #{param1}, #{param2})  <!-- IDao의 첫번쨰 파라미터와 두번째 파라미터를 순서대로 넣는다 -->
+	</insert>
+	
+	<select id="listDao" resultType="com.yongjin.mybatisss.dto.BoardDto">
+		SELECT * FROM myboard ORDER BY mid DESC
+	
+	</select>
+	
+</mapper>
