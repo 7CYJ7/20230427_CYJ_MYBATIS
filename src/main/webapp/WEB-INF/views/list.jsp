@@ -11,7 +11,7 @@
 	<h1>게시글 목록</h1>
 	<hr>
 	
-	<c:forEach items="${list }" var="dto">  <!-- 모델에 실려온건 ${ }안에 넣는다 -->
+	<c:forEach items="${list }" var="dto">
 	<h2>글번호 : ${dto.mid }</h2>
 	<h2>글쓴이 : ${dto.mwriter }</h2>
 	<h2>글내용 : ${dto.mcontent }</h2>
